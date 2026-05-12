@@ -17,6 +17,10 @@ export default function App() {
     setItems((prev) => prev.filter((item) => item.id !== id))
   }
 
+  function logTestMessage() {
+    console.log("How's it going?")
+  }
+
   return (
     <main className="app">
       <h1>To-do</h1>
@@ -30,6 +34,9 @@ export default function App() {
           aria-label="New task"
         />
         <button type="submit">Add</button>
+        <button type="button" onClick={logTestMessage}>
+          Test
+        </button>
       </form>
 
       {items.length === 0 ? (
