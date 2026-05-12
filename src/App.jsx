@@ -36,7 +36,7 @@ export default function App() {
         <button type="submit">Add</button>
       </form>
 
-      <button type="button" onClick={logTestMessage}>
+      <button className="test-button" type="button" onClick={logTestMessage}>
         Test
       </button>
 
