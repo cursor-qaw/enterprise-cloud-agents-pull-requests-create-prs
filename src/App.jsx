@@ -5,6 +5,10 @@ export default function App() {
   const [items, setItems] = useState([])
   const [draft, setDraft] = useState('')
 
+  function logTestMessage() {
+    console.log("How's it going?")
+  }
+
   function addItem(e) {
     e.preventDefault()
     const text = draft.trim()
@@ -31,6 +35,10 @@ export default function App() {
         />
         <button type="submit">Add</button>
       </form>
+
+      <button className="test-button" type="button" onClick={logTestMessage}>
+        Test Button
+      </button>
 
       {items.length === 0 ? (
         <p className="empty">No tasks yet.</p>
